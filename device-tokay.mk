@@ -22,7 +22,7 @@ SHIPPING_API_LEVEL := 34
 include device/google/zumapro/common.mk
 
 # Use RKP-backed KeyMint import attestation through Keystore2.
-PRODUCT_SYSTEM_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.lineage.duckrkp.trusty_import=true \
     remote_provisioning.hostname?=remoteprovisioning.googleapis.com
 
