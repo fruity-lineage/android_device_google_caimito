@@ -21,6 +21,11 @@ SHIPPING_API_LEVEL := 34
 # Inherit from zumapro
 include device/google/zumapro/common.mk
 
+# Use RKP-backed KeyMint import attestation through Keystore2.
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lineage.duckrkp.trusty_import=true \
+    remote_provisioning.hostname?=remoteprovisioning.googleapis.com
+
 # Audio
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
